@@ -70,11 +70,6 @@ bool rec(int v){
 int main() {
     int start_time = clock();
 
-    /*ifstream fin;
-    fin.open("C:\\Users\\vmn3w\\CLionProjects\\eiler\\input.txt");
-    ofstream fout;
-    fout.open("output.txt");*/
-
     freopen("C:\\Users\\vmn3w\\CLionProjects\\eiler\\input.txt", "r", stdin); // redirects standard input
     freopen("C:\\Users\\vmn3w\\CLionProjects\\eiler\\output.txt", "w", stdout);
 
@@ -109,9 +104,12 @@ int main() {
             odd.push_back(i);
 
     if (odd.empty()){
+        int start_v = 1;
+
         for (int v = 1; v <= n; v++)
             if (!vec[v].empty()){
                 dfs(v, -1);
+                start_v = v;
                 break;
             }
 
@@ -121,8 +119,8 @@ int main() {
                 return 0;
             }
 
-        answer.push_back(1);
-        if (rec(1)){
+        answer.push_back(start_v);
+        if (rec(start_v)){
             cout << "Cycle\n";
             for (int i = 0; i < answer.size() - 1; i++)
                 cout << answer[i] << " ";
