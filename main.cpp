@@ -6,6 +6,8 @@
 
 using namespace std;
 
+const bool COUNT_ALL_TIME = false;
+
 const int MAX_N = 10000;
 
 vector <int> vec[MAX_N], answer;
@@ -16,7 +18,7 @@ bool edge_is_used(int v1, int v2){
     return edge_is_used_arr[min(v1, v2)][max(v1, v2)];
 }
 
-bool set_edge_used(int v1, int v2, bool val){
+void set_edge_used(int v1, int v2, bool val){
     edge_is_used_arr[min(v1, v2)][max(v1, v2)] = val;
 }
 
@@ -67,36 +69,41 @@ bool rec(int v){
     return rec_to(v, most_v);
 }
 
-int main() {
+void solve(const string& input_filename){
+
+    fill(used, used + MAX_N, false);
+    for (int i = 0; i < MAX_N; i++){
+        fill(edge_is_used_arr[i], edge_is_used_arr[i] + MAX_N, false);
+        vec[i].clear();
+    }
+
     int start_time = clock();
 
-    freopen("C:\\Users\\vmn3w\\CLionProjects\\eiler\\input.txt", "r", stdin); // redirects standard input
+    ifstream fin;
+    fin.open(input_filename);
     freopen("C:\\Users\\vmn3w\\CLionProjects\\eiler\\output.txt", "w", stdout);
 
-    cin >> n;
+    fin >> n;
 
     if (n == 1){
         cout << "Cycle";
-        return 0;
+        return ;
     }
 
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++){
             int q;
-            cin >> q;
+            fin >> q;
             if (q) {
                 vec[i].push_back(j);
                 m += 1;
             }
         }
 
-//    for (int i = 1; i <= n; i++) {
-//        for (int j: vec[i])
-//            cout << j << " ";
-//        cout << endl;
-//    }
-
     m /= 2;
+
+    if (!COUNT_ALL_TIME)
+        start_time = clock();
 
     vector <int> odd;
     for (int i = 1; i <= n; i++)
@@ -116,7 +123,7 @@ int main() {
         for (int v = 1; v <= n; v++)
             if (!used[v] && !vec[v].empty()){
                 cout << "No"; // У графа 2 или более компоненты связности
-                return 0;
+                return ;
             }
 
         answer.push_back(start_v);
@@ -142,8 +149,25 @@ int main() {
         cout << "No";
 
     int end_time = clock();
-    cerr << end_time - start_time << endl;
-    cerr << "Time: " << (double)(end_time - start_time) / CLOCKS_PER_SEC << " seconds";
+    cerr << (double)(end_time - start_time) / CLOCKS_PER_SEC;
+
+    fin.close();
+}
+
+int main() {
+
+    for (int i = 10; i <= 940; i += 10) {
+        cerr << i << ")\t";
+        for (int j = 1; j <= 5; j++) {
+
+            solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-0.txt");
+            cerr << " ";
+            solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-1.txt");
+            cerr << "\t";
+        }
+        cerr << endl;
+    }
+    solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\940-4-1.txt");
 
     return 0;
 }
