@@ -157,13 +157,13 @@ void solve(const string& input_filename){
 int main() {
 
     for (int i = 10; i <= 940; i += 10) {
-        cerr << i << ")\t";
+        cerr << "| " << i << " | ";
         for (int j = 1; j <= 5; j++) {
 
             solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-0.txt");
-            cerr << " ";
+            cerr << " | ";
             solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-1.txt");
-            cerr << "\t";
+            cerr << " |";
         }
         cerr << endl;
     }
