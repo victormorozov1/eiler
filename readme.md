@@ -32,7 +32,7 @@
 Данные работы хранятся в следующих переменных:
 
 ```
-onst bool COUNT_ALL_TIME = false;
+const bool COUNT_ALL_TIME = false;
 
 const int MAX_N = 10000;
 
@@ -73,7 +73,7 @@ Chain
 
 ![](https://github.com/victormorozov1/eiler/blob/master/images/1.png)
 
-Верно 
+### Верно 
 
 <ins>Тест№ 2 </ins>
 
@@ -98,7 +98,7 @@ Chain
  
 ![](https://github.com/victormorozov1/eiler/blob/master/images/2.png)
  
-Результирующая таблица составлена верно. 
+### верно
 
 <ins>Тест№3 </ins>
 
@@ -125,7 +125,7 @@ Cycle
 
 ![](https://github.com/victormorozov1/eiler/blob/master/images/3.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
 <ins>Тест№4 </ins>
 
@@ -147,7 +147,7 @@ Cycle
  
 ![](https://github.com/victormorozov1/eiler/blob/master/images/4.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
  
 
@@ -172,7 +172,7 @@ No
 
 ![](https://github.com/victormorozov1/eiler/blob/master/images/5.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
 <ins>Тест№6 </ins>
 
@@ -198,7 +198,7 @@ Chain
  
 ![](https://github.com/victormorozov1/eiler/blob/master/images/6.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
 <ins>Тест№7 </ins>
 
@@ -223,7 +223,7 @@ Cycle
  
 ![](https://github.com/victormorozov1/eiler/blob/master/images/7.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
 <ins>Тест№8 </ins>
 
@@ -244,21 +244,18 @@ No
  
 ![](https://github.com/victormorozov1/eiler/blob/master/images/8.png)
 
-Результирующая таблица составлена верно. 
+### верно
 
- 
 
- 
-
- 
-
- 
-
-**Таблицы показывающая время работы программы**
+## Таблицы показывающая время работы программы
 
 В процентах показано сколько в графе ребер от максимального возможного количества
 
+```N``` - количество вершин.
+
 ```Ответ есть``` означает, что в графе есть цикл или цепь
+
+Все тесты, на которых тестировалась программа, лежал в папке ```tests``` и были сгенерированы с помощью ```get_tests.py```.
 
 В этой таблицы не учитывается время на считывание файла
 
