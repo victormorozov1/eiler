@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/vmn3w/CLionProjects/eiler/cmake-build-debug"
+			"value" : "c:/Users/vmn3w/eiler/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/vmn3w/CLionProjects/eiler"
+			"value" : "C:/Users/vmn3w/eiler"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/vmn3w/CLionProjects/eiler/cmake-build-debug"
+			"value" : "C:/Users/vmn3w/eiler/cmake-build-debug"
 		},
 		{
 			"name" : "eiler_IS_TOP_LEVEL",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/vmn3w/CLionProjects/eiler"
+			"value" : "C:/Users/vmn3w/eiler"
 		}
 	],
 	"kind" : "cache",

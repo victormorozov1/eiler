@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/vmn3w/CLionProjects/eiler/cmake-build-debug",
-		"source" : "C:/Users/vmn3w/CLionProjects/eiler"
+		"build" : "C:/Users/vmn3w/eiler/cmake-build-debug",
+		"source" : "C:/Users/vmn3w/eiler"
 	},
 	"version" : 
 	{

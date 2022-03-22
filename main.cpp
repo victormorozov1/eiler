@@ -81,7 +81,7 @@ void solve(const string& input_filename){
 
     ifstream fin;
     fin.open(input_filename);
-    freopen("C:\\Users\\vmn3w\\CLionProjects\\eiler\\output.txt", "w", stdout);
+    freopen("C:\\Users\\vmn3w\\eiler\\output.txt", "w", stdout);
 
     fin >> n;
 
@@ -155,19 +155,7 @@ void solve(const string& input_filename){
 }
 
 int main() {
-
-    for (int i = 10; i <= 940; i += 10) {
-        cerr << "| " << i << " | ";
-        for (int j = 1; j <= 5; j++) {
-
-            solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-0.txt");
-            cerr << " | ";
-            solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\" + to_string(i) + "-" + to_string(j) + "-1.txt");
-            cerr << " |";
-        }
-        cerr << endl;
-    }
-    solve("C:\\Users\\vmn3w\\CLionProjects\\eiler\\tests\\940-4-1.txt");
+    solve("C:\\Users\\vmn3w\\eiler\\input.txt");
 
     return 0;
 }
