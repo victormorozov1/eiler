@@ -81,7 +81,7 @@ void solve(const string& input_filename){
 
     ifstream fin;
     fin.open(input_filename);
-    freopen("C:\\Users\\vmn3w\\eiler\\output.txt", "w", stdout);
+    freopen("C:\\Users\\vmn3w\\mu\\eiler\\output.txt", "w", stdout);
 
     fin >> n;
 
@@ -120,12 +120,6 @@ void solve(const string& input_filename){
                 break;
             }
 
-        for (int v = 1; v <= n; v++)
-            if (!used[v] && !vec[v].empty()){
-                cout << "No"; // У графа 2 или более компоненты связности
-                return ;
-            }
-
         answer.push_back(start_v);
         if (rec(start_v)){
             cout << "Cycle\n";
@@ -155,7 +149,7 @@ void solve(const string& input_filename){
 }
 
 int main() {
-    solve("C:\\Users\\vmn3w\\eiler\\input.txt");
+    solve("C:\\Users\\vmn3w\\mu\\eiler\\input.txt");
 
     return 0;
 }
